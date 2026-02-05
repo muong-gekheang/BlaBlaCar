@@ -18,4 +18,5 @@ class RidePrefService {
  
   static bool get hasCurrentRidePref => currentRidePref != null;
   
+  
 }

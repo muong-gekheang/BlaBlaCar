@@ -1,0 +1,16 @@
+import 'package:blabla/model/ride/locations.dart';
+import 'package:blabla/model/ride/ride.dart';
+import 'package:blabla/service/rides_service.dart';
+import 'package:flutter_test/flutter_test.dart';
+
+void main() {
+  final fileteredResult = RidesService.filterBy(
+    departure: Location(name: 'Dijon', country: Country.france),
+    seatRequested: 2,
+  );
+
+  for (Ride ride in fileteredResult) {
+    print(ride.departureLocation);
+  }
+  print(fileteredResult.length);
+}
